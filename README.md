@@ -7,6 +7,7 @@ Pokédex Lendária – Testes de interface, busca e interação
 cypress
  └── e2e
       ├── ant.cy.js        → Testes do CyberShield
+      
       └── pokedex.cy.js    → Testes da Pokédex Lendária
  1. Testes do CyberShield (Login & Cadastro)
 Arquivo: ant.cy.js
