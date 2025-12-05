@@ -1,7 +1,7 @@
 describe('Testes do index.html - CyberShield', () => {
 
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:5501/cypress/e2e/index.html');
+    cy.visit('http://127.0.0.1:5501/cypress/e2e/ant.html');
   });
 
   // --- LOGIN ---
@@ -42,3 +42,4 @@ describe('Testes do index.html - CyberShield', () => {
   });
 
 });
+
