@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Lendária: A pokepidia dos pokemons</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Pokédex Lendária: A pokepidia dos pokemons</h1>
+    <div class="busca-container">
+      <input type="text" id="busca" placeholder="Buscar Pokémon..." onkeyup="filtrarPokemons()">
+      <button onclick="sair()">Sair</button>
+    </div>
+  </header>
+  <main>
+    <div id="pokedex" class="grid"></div>
+  </main>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <img id="modal-img" alt="">
+      <h2 id="modal-nome"></h2>
+      <p><strong>Espécie:</strong> <span id="modal-especie"></span></p>
+      <p><strong>Raridade:</strong> <span id="modal-raridade"></span></p>
+      <p><strong>Nível de Força:</strong> <span id="modal-forca"></span></p>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+</body>
+</html>

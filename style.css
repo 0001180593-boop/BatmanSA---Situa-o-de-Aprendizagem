@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
+  min-height: 100vh;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/295fb76c-7179-4c70-a508-a1cce61a876f/dcq8ihj-358efe19-a8da-4982-aaf1-e02829eb819d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI5NWZiNzZjLTcxNzktNGM3MC1hNTA4LWExY2NlNjFhODc2ZlwvZGNxOGloai0zNThlZmUxOS1hOGRhLTQ5ODItYWFmMS1lMDI4MjllYjgxOWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.hIqpE7KnqBzbzuoMU5i-IsoAV9bipVxCGNOdRiYXTeg);
+  background-size: cover;
+  background-color: #dd4e07;
+}
+
+/* Tela inicial */
+.inicio-container {
+  text-align: center;
+  margin-top: 5%;
+  animation: fadeIn 2s ease-in;
+}
+.titulo {
+  font-size: 9em;
+  color: black;
+  text-shadow: 0 0 10px #e63946;
+}
+.descricao {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-size: 3.2em;
+    color: black;
+    text-shadow: 0 0 10px #e63946;
+    
+
+}
+.mini-pokebola {
+  width: 36px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.girar {
+  animation: girar 5s linear infinite;
+}
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.banner {
+  width: 80%;
+  border-radius: 15px;
+  margin: 30px 0;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+.inicio-container button {
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 4em;
+  transition: 0.3s;
+}
+.inicio-container button:hover {
+  background: #f1faee;
+  color: #1a1a2e;
+}
+
+
+/* Login */
+.login-container {
+  text-align: center;
+  margin-top: 10%;
+  animation: fadeIn 1.5s ease-in;
+  font-size: 7.0em;
+  color: black;
+}
+.login-container input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+.login-container button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.login-container button:hover {
+  background: #f1faee;
+  color: #1a1a2e;
+}
+#erro {
+  color: red;
+  margin-top: 10px;
+}
+
+
+/* Header e busca */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f3460;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+header input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+header button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+header button:hover {
+  background: #f1faee;
+  color: #1a1a2e;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  position: relative;
+  background: #16213e;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #e63946;
+}
+.card img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Pokébola nos cards */
+.card::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG');
+  background-size: cover;
+  opacity: 0.3;
+  transition: opacity .3s;
+}
+.card:hover::before {
+  opacity: 0.9;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #0f3460;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  position: relative;
+  box-shadow: 0 0 20px #e63946;
+  animation: fadeIn 0.5s ease-in;
+}
+.modal-content img {
+  width: 150px;
+  height: 150px;
+}
+.fechar {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
